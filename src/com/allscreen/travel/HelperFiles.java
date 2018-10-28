@@ -40,12 +40,12 @@ public class HelperFiles {
         try(BufferedInputStream reader = new BufferedInputStream(new FileInputStream(fileName));)
 
         {
-
+            int bufChar;
             char[] charBuf = new char[128];
-            while ( (int=reader.read() )!=null)
+            while ( (char)(bufChar =reader.read()) != -1)
             {
 
-                System.out.println(newLine);
+                System.out.println(charBuf);
 
 
             }

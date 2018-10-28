@@ -7,6 +7,7 @@ import java.io.*;
 
 import java.nio.file.Paths;
 import java.nio.file.Files;
+import java.util.StringJoiner;
 
 
 public class Main {
@@ -15,22 +16,27 @@ public class Main {
 
 
 
-HelperFiles.ReadFile("out/production/Project 3/com/allscreen/travel/file.txt");
+//HelperFiles.ReadFile("out/production/Project 3/com/allscreen/travel/file.txt");
+//
+//        try(InputStream in = new FileInputStream("out/production/Project 3/com/allscreen/travel/file.txt");)
+//        {
+//            HelperFiles.ReadChar(in);
+//
+//
+//        } catch (FileNotFoundException e1) {
+//            e1.printStackTrace();
+//        } catch (IOException e1) {
+//            e1.printStackTrace();
+//        }
 
-        try(InputStream in = new FileInputStream("out/production/Project 3/com/allscreen/travel/file.txt");)
-        {
-            HelperFiles.ReadChar(in);
+        StringJoiner joinString = new StringJoiner(", ");
+//        joinString.add("alpha");
+//        joinString.add("Beta");
+//        joinString.add("Gamma");
+        joinString.setEmptyValue("hello where are you");
+        String line = joinString.toString();
 
-
-        } catch (FileNotFoundException e1) {
-            e1.printStackTrace();
-        } catch (IOException e1) {
-            e1.printStackTrace();
-        }
-
-
-
-        //System.out.println("Hello World!");
+        System.out.println(line);
 
 //        try (BufferedReader reader = Files.newBufferedReader(Paths.get("/Users/admin/IdeaProjects/Project 3/out/production/Project 3/com/allscreen/travel/file.txt")); BufferedWriter writer = Files.newBufferedWriter(Paths.get("/Users/admin/IdeaProjects/Project 3/out/production/Project 3/com/allscreen/travel/file2.txt"));)
 //
