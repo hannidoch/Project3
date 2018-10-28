@@ -10,7 +10,7 @@ public class HelperFiles {
 
 
 
-        try(BufferedReader reader = new BufferedReader(new FileReader(fileName));)
+        try(BufferedReader reader = new BufferedReader(new FileReader(fileName)))
 
         {
 
